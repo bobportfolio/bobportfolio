@@ -1,3 +1,3 @@
 # bobportfolio
 
-the django files to the bobportfolio.uk site
+The django code for the bobportfolio.uk website

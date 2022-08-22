@@ -1,0 +1,59 @@
+{% extends 'portfolio/base.html' %}
+{% load static %}
+{% load bootstrap5 %}
+
+{% block title %} bobportfolio.uk {% endblock %}
+
+{% block content %}
+
+<div class="container">
+  <br>
+  <div>
+    <h1>bobportfolio.uk</h1>
+    <p class="lead">The résumé and computing portfolio of Robert Smith, Brighton</p>
+  </div>
+
+</div>
+
+<div id="myCarousel" class="carousel slide carousel-dark"  data-bs-ride="carousel">
+  <!-- Indicators/dots -->
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active"></button>
+    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1"></button>
+    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2"></button>
+  </div>
+  
+  <!-- Wrapper for slides -->   
+  <div class="carousel-inner" role="listbox">
+    <div class="carousel-item active home-carousel">
+	  <a href="http://bobportfolio.uk/#">
+		<img src="{% static 'portfolio/images/portfolio.gif' %}" alt="Portfolio">
+	  </a>
+    </div>
+
+    <div class="carousel-item home-carousel">
+      <img src="{% static 'portfolio/images/curriculum-vitae.jpg' %}" alt="Résumé">
+    </div>
+
+    <div class="carousel-item home-carousel">
+      <img src="{% static 'portfolio/images/mentalhealth.jpg' %}" alt="Mental Health">
+    </div>
+  </div>
+  
+  <!-- Left and right controls/icons -->
+  <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </button>
+</div>
+
+<div class="container simple-buttons" style="min-height: 100px;">
+  <p></p>
+  <a href="http://football.test" type="button" class="btn btn-primary btn-lg">Portfolio</a>
+  <a href="#" type="button" class="btn btn-success btn-lg">Résumé</a>
+  <a href="#" type="button" class="btn btn-warning btn-lg">Wellbeing</a>
+</div>
+
+{% endblock %}

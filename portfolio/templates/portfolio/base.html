@@ -1,0 +1,65 @@
+{% load static %}
+{% load bootstrap5 %}
+{% load bootstrap_themes %}
+ 
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <title>
+            {% block title %}{% endblock %}
+        </title>
+       
+        {% block stylesheets %}
+            <link rel="stylesheet" type="text/css" href="{% static 'portfolio/starter.css' %}" />
+            {% bootstrap_css %}
+            {# bootstrap_styles theme='cyborg' type='min.css' #}
+        {% endblock %}
+    </head>
+    <body>
+        {% bootstrap_messages %}
+
+        {# Navigation #}
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+          <div class="container-fluid">
+            <a class="navbar-brand" href="http://bobportfolio.uk">bobportfolio.uk</a>
+            <div class="navbar-brand">django</a>
+        </nav>
+
+        {# Page Contents #}
+        <div class="container">
+            {% for message in messages %}
+                <div class="alert alert-info">
+                    <button type="button" class="close" data-dismiss="alert">&times;</button>
+                    {{ message }}
+                </div>
+            {% endfor %}
+            {% block content %}
+                <h2>{{ title }}</h2>
+                <hr>
+            {% endblock %}
+        </div>
+
+        {# Footer #}
+        <br><hr>
+        <div class="container" style="text-align: center;font-size:14px">
+            {% block footer %}
+                <div>
+                    Copyright &copy; {% now "Y" %} Robert Smith
+                </div>
+                <div>
+                    django: 4 &bull;
+                    python: 3 &bull;
+                    bootstrap: 5
+                </div>
+            {% endblock %}
+        </div>
+
+        {% block scripts %}
+            {% bootstrap_script use_min=True %}
+            {% bootstrap_javascript %}
+		{% endblock %}
+    </body>
+</html>

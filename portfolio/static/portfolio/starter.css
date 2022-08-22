@@ -1,0 +1,26 @@
+body {
+  padding-top: 50px;
+}
+
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}
+
+.carousel-inner {
+  height: 100%;
+}
+
+.carousel-item {
+  text-align: center;
+}
+
+.carousel-item img {
+  display: block;
+  margin: auto;
+  height: 500px;
+}
+
+.simple-buttons {
+  text-align: center;
+}
