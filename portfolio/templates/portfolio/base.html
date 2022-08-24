@@ -1,7 +1,7 @@
 {% load static %}
 {% load bootstrap5 %}
 {% load bootstrap_themes %}
- 
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -13,9 +13,9 @@
         </title>
        
         {% block stylesheets %}
-            <link rel="stylesheet" type="text/css" href="{% static 'portfolio/starter.css' %}" />
             {% bootstrap_css %}
             {# bootstrap_styles theme='cyborg' type='min.css' #}
+            <link rel="stylesheet" type="text/css" href="{% static 'portfolio/starter.css' %}" />
         {% endblock %}
     </head>
     <body>
@@ -24,8 +24,8 @@
         {# Navigation #}
         <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
           <div class="container-fluid">
-            <a class="navbar-brand" href="http://bobportfolio.uk">bobportfolio.uk</a>
-            <div class="navbar-brand">django</a>
+            <a class="navbar-brand" href="http://bobportfolio.uk">home</a>
+            <div class="navbar-brand">written in django</a>
         </nav>
 
         {# Page Contents #}
@@ -50,9 +50,9 @@
                     Copyright &copy; {% now "Y" %} Robert Smith
                 </div>
                 <div>
-                    django: 4 &bull;
-                    python: 3 &bull;
-                    bootstrap: 5
+                    django: {{ django_version }} &bull;
+                    python: {{ python_version }} &bull;
+                    bootstrap: {{ bootstrap_version }}
                 </div>
             {% endblock %}
         </div>

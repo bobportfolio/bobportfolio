@@ -7,10 +7,13 @@
 {% block content %}
 
 <div class="container">
-  <br>
-  <div>
-    <h1>bobportfolio.uk</h1>
-    <p class="lead">The résumé and computing portfolio of Robert Smith, Brighton</p>
+  <div class="row" style="padding:10px">
+        <div class="col-md-5"><h1>bobportfolio.uk</h1></div>
+        <div class="col-md-7">
+            <p class="lead" style="padding:10px">
+                The resume and computing portfolio of Robert Smith, Brighton
+            </p>
+        </div>
   </div>
 
 </div>
@@ -27,16 +30,20 @@
   <div class="carousel-inner" role="listbox">
     <div class="carousel-item active home-carousel">
 	  <a href="http://bobportfolio.uk/#">
-		<img src="{% static 'portfolio/images/portfolio.gif' %}" alt="Portfolio">
+		<img src="{% static 'portfolio/images/portfolio.jpg' %}" alt="Portfolio"/>
 	  </a>
     </div>
 
     <div class="carousel-item home-carousel">
-      <img src="{% static 'portfolio/images/curriculum-vitae.jpg' %}" alt="Résumé">
+	  <a href="http://bobportfolio.uk/#">
+        <img src="{% static 'portfolio/images/resume.jpg' %}" alt="Resume"/>
+	  </a>
     </div>
 
     <div class="carousel-item home-carousel">
-      <img src="{% static 'portfolio/images/mentalhealth.jpg' %}" alt="Mental Health">
+	  <a href="http://bobportfolio.uk/#">
+          <img src="{% static 'portfolio/images/wellbeing.jpg' %}" alt="Wellbeing"/>
+	  </a>
     </div>
   </div>
   
@@ -49,10 +56,10 @@
   </button>
 </div>
 
-<div class="container simple-buttons" style="min-height: 100px;">
+<div class="container simple-buttons">
   <p></p>
-  <a href="http://football.test" type="button" class="btn btn-primary btn-lg">Portfolio</a>
-  <a href="#" type="button" class="btn btn-success btn-lg">Résumé</a>
+  <a href="#" type="button" class="btn btn-primary btn-lg">Portfolio</a>
+  <a href="#" type="button" class="btn btn-success btn-lg">Resume</a>
   <a href="#" type="button" class="btn btn-warning btn-lg">Wellbeing</a>
 </div>
 
