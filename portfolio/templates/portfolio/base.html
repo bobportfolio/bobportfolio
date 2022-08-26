@@ -24,8 +24,8 @@
         {# Navigation #}
         <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
           <div class="container-fluid">
-            <a class="navbar-brand" href="http://bobportfolio.uk">home</a>
-            <div class="navbar-brand">written in django</a>
+            <a class="navbar-brand" href="/">home</a>
+            <a class="navbar-brand" href="#footer">written in django</a>
         </nav>
 
         {# Page Contents #}
@@ -44,7 +44,7 @@
 
         {# Footer #}
         <br><hr>
-        <div class="container" style="text-align: center;font-size:14px">
+        <div id="footer" class="container" style="text-align: center;font-size:14px">
             {% block footer %}
                 <div>
                     Copyright &copy; {% now "Y" %} Robert Smith
@@ -54,6 +54,7 @@
                     python: {{ python_version }} &bull;
                     bootstrap: {{ bootstrap_version }}
                 </div>
+                <div><br></div>
             {% endblock %}
         </div>
 
