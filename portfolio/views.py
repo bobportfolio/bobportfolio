@@ -2,6 +2,7 @@ import django
 from django.shortcuts import render
 from platform import python_version
 from bootstrap5.bootstrap import get_bootstrap_setting
+from portfolio.models import Projects, Urls
 
 
 def find_bootstrap_version_from_href():
@@ -16,10 +17,22 @@ def find_bootstrap_version_from_href():
     return 5
 
 
-def index(request):
+def get_versions():
     args = {}
     v = django.VERSION
     args['django_version'] = "%d.%d.%d" % (v[0], v[1], v[2])
     args['python_version'] = python_version()
     args['bootstrap_version'] = find_bootstrap_version_from_href()
-    return render(request, 'portfolio/index.html', args)
+    return args
+
+
+def index(request):
+    return render(request, 'portfolio/index.html', get_versions())
+
+
+def projects(request):
+    args = {}
+    args['projects'] = Projects.objects.all()
+    args['urls'] = Urls.objects.all()
+    args.update(get_versions())
+    return render(request, 'portfolio/projects.html', args)

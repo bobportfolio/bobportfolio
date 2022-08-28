@@ -1,0 +1,29 @@
+{% extends 'portfolio/base.html' %}
+{% load static %}
+{% load bootstrap5 %}
+
+{% block title %} bobportfolio.uk - portfolio {% endblock %}
+
+{% block content %}
+
+<div><br></div>
+<table class="table table-striped table-bordered">
+<thead>
+    <tr>
+        <td>project</td>
+        <td>code</td>
+        <td>link</td>
+        <td>keywords</td>
+    </tr>
+</thead>
+    {% for project in projects %}
+    <tr>
+        <td>{{ project.project_name }}</td>
+        <td><a href="{{ project.source_code_url_fk.url }}">{{ project.source_code_url_fk.site_name }}</a></td>
+        <td><a href="{{ project.site_url_fk.url }}">{{ project.site_url_fk.site_name }}</a></td>
+        <td>{{ project.keywords }}</td>
+    </tr>    
+    {% endfor %}
+</table>
+
+{% endblock %}

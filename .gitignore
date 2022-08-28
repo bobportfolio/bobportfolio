@@ -9,6 +9,9 @@ media
 # virtual env #
 djangoenv/
 
+#conf
+*.cnf
+
 # Backup files # 
 *.bak 
 
