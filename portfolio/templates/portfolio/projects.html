@@ -18,7 +18,7 @@
 </thead>
     {% for project in projects %}
     <tr>
-        <td>{{ project.project_name }}</td>
+        <td><abbr title="{{ project.description }}">{{ project.project_name }}&nbsp;<span style="font-size: 24px;">&#9432;</span></abbr></td>
         <td><a href="{{ project.source_code_url_fk.url }}">{{ project.source_code_url_fk.site_name }}</a></td>
         <td><a href="{{ project.site_url_fk.url }}">{{ project.site_url_fk.site_name }}</a></td>
         <td>{{ project.keywords }}</td>
