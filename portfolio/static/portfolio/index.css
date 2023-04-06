@@ -1,0 +1,15 @@
+/* css for home page */
+
+.carousel-item {
+  text-align: center;
+}
+
+.carousel-item > a > img {
+  display: block;
+  margin: auto;
+  width: 70%;
+}
+
+.simple-buttons {
+  text-align: center;
+}

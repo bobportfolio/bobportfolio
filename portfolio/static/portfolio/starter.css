@@ -1,22 +1,10 @@
+/* base css */
+
 body {
   padding-top: 50px;
 }
 
 .starter-template {
   padding: 40px 15px;
-  text-align: center;
-}
-
-.carousel-item {
-  text-align: center;
-}
-
-.carousel-item > a > img {
-  display: block;
-  margin: auto;
-  width: 70%;
-}
-
-.simple-buttons {
   text-align: center;
 }

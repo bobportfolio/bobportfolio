@@ -4,26 +4,66 @@
 
 {% block title %} bobportfolio.uk - portfolio {% endblock %}
 
+{% block page_stylesheets %}
+    <link rel="stylesheet" type="text/css" href="{% static 'portfolio/projects.css' %}" />
+{% endblock %}
+
 {% block content %}
 
-<div><br></div>
-<table class="table table-striped table-bordered">
+<div class="search-box">
+<input type="text" id="myInput" onkeyup="keywordSearch()" placeholder="keyword search...">
+<span class="tooltiptext">enter one or more keywords, separated by spaces.</span>
+</div>
+<div>
+<table id="myTable" class="table table-striped table-bordered">
 <thead>
     <tr>
-        <td>project</td>
-        <td>code</td>
-        <td>link</td>
-        <td>keywords</td>
+        <td width="24%">project</td>
+        <td width="12%">code</td>
+        <td width="24%">link</td>
+        <td width="40%">keywords</td>
     </tr>
 </thead>
     {% for project in projects %}
     <tr>
-        <td><abbr title="{{ project.description }}">{{ project.project_name }}&nbsp;<span style="font-size: 24px;">&#9432;</span></abbr></td>
+        <td class="project-name">
+            {{ project.project_name }}
+            <span class="description">{{ project.description }}</span>
+        </td>
         <td><a href="{{ project.source_code_url_fk.url }}">{{ project.source_code_url_fk.site_name }}</a></td>
         <td><a href="{{ project.site_url_fk.url }}">{{ project.site_url_fk.site_name }}</a></td>
         <td>{{ project.keywords }}</td>
     </tr>    
     {% endfor %}
 </table>
+</div>
+{% endblock %}
 
+{% block scripts %}
+<script>
+function keywordSearch() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  keywords = input.value.toLowerCase().split(" ");
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 1; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[3];
+    if (td) {
+      txtValue = td.textContent;
+      display = true;
+      for (item of keywords) {
+        if (txtValue.indexOf(item) <= -1) {
+          display = false;
+        }
+      }
+      if (display) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+</script>
 {% endblock %}
