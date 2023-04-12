@@ -1,14 +1,18 @@
 /* css for projects page */
 
+.title {
+  padding: 24px 0px 24px 0px;
+}
+
 #myInput {
   background-image: url('images/searchicon.png');
   background-position: 10px 12px;
   background-repeat: no-repeat;
   float: right;
-  width: 40%;
+  width: 81.7%;
   font-size: 16px;
-  padding: 12px 20px 12px 40px; /* Add some padding */
-  border: 1px solid #ddd; /* Add a grey border */
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd; /* grey border */
   margin-top: 24px;
   margin-bottom: 24px;
 }
@@ -21,33 +25,32 @@
   float: right;
   text-align: center;
   border-radius: 6px;
-  padding: 5px 0;
+  padding: 12px;
   /* Position the tooltip */
-  position: relative;
+  position: absolute;
   z-index: 1;
-  top: 20px;
-  left: -24px;
+  top: 64px;
+  left: 46%;
 }
 
 .search-box:hover .tooltiptext {
   visibility: visible;
 }
 
-
 .description {
   visibility: hidden;
-  width: 240px;
+  width: 320px;
   background-color: black;
   color: #fff;
   float: right;
-  text-align: center;
+  text-align: left;
   border-radius: 6px;
-  padding: 5px 0;
+  padding: 12px;
   /* Position the tooltip */
   position: absolute;
   z-index: 1;
 }
 
-.project-name:hover .description {
+.project-hover:hover .description {
   visibility: visible;
 }
