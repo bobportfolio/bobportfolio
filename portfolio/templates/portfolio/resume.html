@@ -1,0 +1,85 @@
+{% extends 'portfolio/base.html' %}
+{% load static %}
+{% load bootstrap5 %}
+
+{% block title %} bobportfolio.uk - resume {% endblock %}
+
+{% block page_stylesheets %}
+    <link rel="stylesheet" type="text/css" href="{% static 'portfolio/resume.css' %}" />
+{% endblock %}
+
+{% block content %}
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="title">
+            <h1>Resume{% if card_filter %} : {{ card_filter }}{% endif %}</h1>            
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="title">
+            <a href="work" class="btn btn-danger">Work</a>
+            <a href="education" class="btn btn-info">Education</a>    
+            <a href="all" class="btn btn-dark">All</a>
+        </div>
+    </div>
+    <div class="col-md-5">
+        <div class="search-box">
+            <input type="text" id="myInput" onkeyup="keywordSearch()" placeholder="keyword search...">
+            <span class="tooltiptext">enter one or more keywords. Separate with spaces</span>
+        </div>
+    </div>
+</div>
+
+<div id="myCards">
+    {% for card in cards %}
+    <div class="card" id="myCard">
+        <div class="card-{{ card.cardtype }} card-header">
+            <h6>{{ card.startdate | date:'F Y' }} to {{ card.enddate | date:'F Y' }}</h6>
+            <h5>{{ card.place }}</h5>
+        </div>
+        <div id="cardBody" class="row g-0">
+              <div class="cardImage col-md-4">
+                <img id="cardImage" src="{% static 'portfolio/images/' %}{{ card.image }}" class="img-fluid rounded-start" alt="typewriter">          
+              </div>
+              <div class="col-md-8">
+                <div class="card-body">
+                  <h5 class="card-title">{{ card.title }}</h5>
+                  <h6>{% if card.cardtype == 'education' %}result: {% endif %}{{ card.subtitle }}</h6>
+                  <p class="card-text">{{ card.description }}</p>
+                  <p class="card-text" style="display:none;">{{ card.keywords }}</p>
+                </div>
+              </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
+
+{% block scripts %}
+<script>
+function keywordSearch() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  keywords = input.value.toLowerCase().split(" ");
+  cards = document.getElementsByClassName("card");
+  for (i = 0; i < cards.length; i++) {
+    card = cards[i].getElementsByTagName("p")[1];
+    if (card) {
+      txtValue = card.textContent;
+      display = true;
+      for (item of keywords) {
+        if (txtValue.indexOf(item) <= -1) {
+          display = false;
+        }
+      }
+      if (display) {
+        cards[i].style.display = "";
+      } else {
+        cards[i].style.display = "none";
+      }
+    }       
+  }
+}
+</script>
+{% endblock %}

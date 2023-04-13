@@ -2,7 +2,7 @@ import django
 from django.shortcuts import render
 from platform import python_version
 from bootstrap5.bootstrap import get_bootstrap_setting
-from portfolio.models import Projects, Urls
+from portfolio.models import Cards, Projects, Urls
 
 
 def find_bootstrap_version_from_href():
@@ -36,3 +36,16 @@ def projects(request):
     args['urls'] = Urls.objects.all()
     args.update(get_versions())
     return render(request, 'portfolio/projects.html', args)
+
+
+def resume(request, card_filter):
+    args = {}
+    if card_filter in ["education", "work"]:
+        args['card_filter'] = card_filter.capitalize()
+        cards = Cards.objects.filter(cardtype=card_filter)
+    else:
+        args['card_filter'] = None
+        cards = Cards.objects.all()
+    args['cards'] = cards.order_by('-startdate')
+    args.update(get_versions())
+    return render(request, 'portfolio/resume.html', args)

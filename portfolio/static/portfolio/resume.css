@@ -1,0 +1,94 @@
+/* css for projects page */
+
+.title {
+  padding: 24px 0px 24px 0px;
+}
+
+.buttons {
+  padding: 24px 0px 24px 0px;
+}
+
+#myInput {
+  background-image: url('images/searchicon.png');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+  float: right;
+  width: 81.7%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 1px solid #ddd; /* grey border */
+  margin-top: 24px;
+  margin-bottom: 24px;
+}
+
+#myCards {
+  margin-top: 24px;
+  margin-bottom: 24px;
+  float: center;
+}
+
+.card-education {
+  background-color: rgb(192, 254, 254);
+}
+
+.card-work {
+  background-color: rgb(254, 192, 254);
+}
+
+#cardBody {
+  padding: 8px;
+}
+
+.cardImage {
+  width: 160px;
+  height: 120px;
+}
+
+#cardImage {
+  max-width: 160px;
+  max-height: 120px;
+}
+
+#myCard {
+    margin-top: 24px;
+    margin-bottom: 24px;
+    width: 80%;
+}
+
+.tooltiptext {
+  visibility: hidden;
+  width: 240px;
+  background-color: black;
+  color: #fff;
+  float: right;
+  text-align: center;
+  border-radius: 6px;
+  padding: 12px;
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+  top: 64px;
+  left: 46%;
+}
+
+.search-box:hover .tooltiptext {
+  visibility: visible;
+}
+
+.description {
+  visibility: hidden;
+  width: 320px;
+  background-color: black;
+  color: #fff;
+  float: right;
+  text-align: left;
+  border-radius: 6px;
+  padding: 12px;
+  /* Position the tooltip */
+  position: absolute;
+  z-index: 1;
+}
+
+.project-hover:hover .description {
+  visibility: visible;
+}

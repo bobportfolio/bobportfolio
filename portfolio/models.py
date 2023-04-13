@@ -8,6 +8,24 @@
 from django.db import models
 
 
+class Cards(models.Model):
+    id = models.PositiveSmallIntegerField(primary_key=True)
+    startdate = models.DateField()
+    enddate = models.DateField()
+    cardtype = models.CharField(max_length=255)
+    place = models.CharField(max_length=255)
+    title = models.CharField(max_length=255)
+    subtitle = models.CharField(max_length=255)
+    image = models.CharField(max_length=255)
+    keywords = models.CharField(max_length=1023)
+    description = models.CharField(max_length=1023)
+
+    class Meta:
+        app_label = 'portfolio'
+        managed = False
+        db_table = 'cards'
+
+
 class Projects(models.Model):
     id = models.PositiveSmallIntegerField(primary_key=True)
     project_name = models.CharField(max_length=32)
@@ -17,8 +35,8 @@ class Projects(models.Model):
     description = models.CharField(max_length=1024, blank=True, null=True)
 
     class Meta:
-        managed = False
         app_label = 'portfolio'
+        managed = False
         db_table = 'projects'
 
 
@@ -28,6 +46,6 @@ class Urls(models.Model):
     url = models.CharField(max_length=1024)
 
     class Meta:
-        managed = False
         app_label = 'portfolio'
+        managed = False
         db_table = 'urls'
