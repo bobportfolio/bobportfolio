@@ -11,19 +11,12 @@
 {% block content %}
 
 <div class="row">
-    <div class="col-md-5">
+    <div class="col-md-6">
         <div class="title">
             <h1>Resume{% if card_filter %} : {{ card_filter }}{% endif %}</h1>            
         </div>
     </div>
-    <div class="col-md-3">
-        <div class="title">
-            <a href="work" class="btn btn-danger">Work</a>
-            <a href="education" class="btn btn-info">Education</a>    
-            <a href="all" class="btn btn-dark">All</a>
-        </div>
-    </div>
-    <div class="col-md-4">
+    <div class="col-md-6">
         <div class="search-box">
             <input type="text" id="myInput" onkeyup="keywordSearch()" placeholder="keyword search...">
             <span class="tooltiptext">enter one or more keywords. Separate with spaces</span>
@@ -31,22 +24,38 @@
     </div>
 </div>
 
+<div>
+    <div class="buttons">
+        <a href="skills" class="btn card-skill">Skills</a>
+        <a href="work" class="btn card-work">Work</a>
+        <a href="education" class="btn card-education">Education</a>    
+        <a href="writing" class="btn card-writing">Published</a>
+        <a href="all" class="btn btn-dark">All</a>
+    </div>
+</div>
+
 <div id="myCards">
     {% for card in cards %}
     <div class="card" id="myCard">
         <div class="card-{{ card.cardtype }} card-header">
-            <h6>{{ card.startdate | date:'F Y' }} to {{ card.enddate | date:'F Y' }}</h6>
+            {% if card.cardtype == 'education' or card.cardtype == 'work' %}
+                <h6>{{ card.startdate | date:'F Y' }} to {{ card.enddate | date:'F Y' }}</h6>
+            {% elif card.cardtype == 'writing' %}
+                <h6>{{ card.startdate | date:'F Y' }}</h6>  
+            {% elif card.cardtype == 'skill' %}
+                <h6>{{ card.cardtype }}</h6>
+            {% endif %}
             <h5>{{ card.place }}</h5>
         </div>
         <div id="cardBody" class="row g-0">
               <div class="cardImage col-md-4">
-                <img id="cardImage" src="{% static 'portfolio/images/' %}{{ card.image }}" class="img-fluid rounded-start" alt="typewriter">          
+                <img id="cardImage" src="{% static 'portfolio/images/' %}{{ card.image }}" class="img-fluid rounded-start" alt="{{ card.title }}">          
               </div>
               <div class="col-md-8">
                 <div class="card-body">
                   <h5 class="card-title">{{ card.title }}</h5>
                   <h6>{% if card.cardtype == 'education' %}result: {% endif %}{{ card.subtitle }}</h6>
-                  <p class="card-text">{{ card.description }}</p>
+                  <p class="card-text">{{ card.description | safe }}</p>
                   <p class="card-text" style="display:none;">{{ card.keywords }}</p>
                 </div>
               </div>
@@ -64,9 +73,10 @@ function keywordSearch() {
   keywords = input.value.toLowerCase().split(" ");
   cards = document.getElementsByClassName("card");
   for (i = 0; i < cards.length; i++) {
-    card = cards[i].getElementsByTagName("p")[1];
-    if (card) {
-      txtValue = card.textContent;
+    card_description = cards[i].getElementsByTagName("p")[0];
+    card_keywords = cards[i].getElementsByTagName("p")[1];
+    if (card_keywords) {
+      txtValue = card_keywords.textContent.toLowerCase() + " " + card_description.textContent.toLowerCase();
       display = true;
       for (item of keywords) {
         if (txtValue.indexOf(item) <= -1) {

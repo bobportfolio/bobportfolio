@@ -40,9 +40,15 @@ def projects(request):
 
 def resume(request, card_filter):
     args = {}
-    if card_filter in ["education", "work"]:
+    if card_filter in ['skills', 'education', 'work', 'writing']:
         args['card_filter'] = card_filter.capitalize()
-        cards = Cards.objects.filter(cardtype=card_filter)
+        cardtype = 'skill' if card_filter == 'skills' else card_filter
+        cards = Cards.objects.filter(cardtype=cardtype)
+    elif card_filter == 'main':
+        print("main")
+        args['card_filter'] = 'Main'
+        main_types = ['skill', 'work', 'education']
+        cards = Cards.objects.filter(cardtype__in=main_types)
     else:
         args['card_filter'] = None
         cards = Cards.objects.all()

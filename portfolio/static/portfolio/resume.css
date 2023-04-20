@@ -1,11 +1,11 @@
 /* css for projects page */
 
 .title {
-  padding: 24px 0px 24px 0px;
+  padding: 24px 0px 12px 0px;
 }
 
 .buttons {
-  padding: 24px 0px 24px 0px;
+  padding: 0px 0px 12px 0px;
 }
 
 #myInput {
@@ -28,11 +28,19 @@
 }
 
 .card-education {
-  background-color: rgb(192, 254, 254);
+  background-color: rgb(191, 255, 255);
 }
 
 .card-work {
-  background-color: rgb(254, 192, 254);
+  background-color: rgb(255, 191, 255);
+}
+
+.card-skill {
+  background-color: rgb(0, 159, 0);
+}
+
+.card-writing {
+  background-color: rgb(255, 127, 127);
 }
 
 #cardBody {
