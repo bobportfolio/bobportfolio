@@ -27,11 +27,13 @@ def get_versions():
 
 
 def index(request):
-    return render(request, 'portfolio/index.html', get_versions())
+    args = {'page': 'Home'}
+    args.update(get_versions())
+    return render(request, 'portfolio/index.html', args)
 
 
 def projects(request):
-    args = {}
+    args = {'page': 'Projects'}
     args['projects'] = Projects.objects.all()
     args['urls'] = Urls.objects.all()
     args.update(get_versions())
@@ -39,19 +41,20 @@ def projects(request):
 
 
 def resume(request, card_filter):
-    args = {}
-    if card_filter in ['skills', 'education', 'work', 'writing']:
+    args = {'page': 'Resume'}
+    if card_filter in ['skills', 'education', 'work']:
         args['card_filter'] = card_filter.capitalize()
         cardtype = 'skill' if card_filter == 'skills' else card_filter
         cards = Cards.objects.filter(cardtype=cardtype)
     elif card_filter == 'main':
-        print("main")
         args['card_filter'] = 'Main'
-        main_types = ['skill', 'work', 'education']
-        cards = Cards.objects.filter(cardtype__in=main_types)
+        cards = Cards.objects.filter(main=True)
+    elif card_filter in ['coding', 'writing']:
+        args['card_filter'] = card_filter.capitalize()
+        cards = Cards.objects.filter(category=card_filter)
     else:
         args['card_filter'] = None
         cards = Cards.objects.all()
-    args['cards'] = cards.order_by('-startdate')
+    args['cards'] = cards.order_by('-priority', '-startdate')
     args.update(get_versions())
     return render(request, 'portfolio/resume.html', args)

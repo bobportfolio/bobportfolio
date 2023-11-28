@@ -8,6 +8,12 @@
     <link rel="stylesheet" type="text/css" href="{% static 'portfolio/index.css' %}" />
 {% endblock %}
 
+{% block navbar %}
+    <a class="nav-item nav-link active" href="#">Home</span></a>
+    <a class="nav-item nav-link" href="/portfolio">Projects</a>
+    <a class="nav-item nav-link" href="/resume/main">Resume</a>
+{% endblock %}
+
 {% block content %}
 
 <div class="container">
@@ -44,7 +50,7 @@
     </div>
 
     <div class="carousel-item home-carousel">
-	  <a href="http://bobportfolio.uk/#">
+	  <a href="#">
           <img src="{% static 'portfolio/images/wellbeing.jpg' %}" alt="Wellbeing"/>
 	  </a>
     </div>
@@ -61,7 +67,7 @@
 
 <div class="container simple-buttons">
   <p></p>
-  <a href="portfolio" type="button" class="btn btn-primary btn-lg">Portfolio</a>
+  <a href="portfolio" type="button" class="btn btn-primary btn-lg">Projects</a>
   <a href="resume/main" type="button" class="btn btn-success btn-lg">Resume</a>
   <a href="#" type="button" class="btn btn-warning btn-lg">Wellbeing</a>
 </div>

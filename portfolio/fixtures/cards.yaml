@@ -1,0 +1,335 @@
+- model: portfolio.cards
+  pk: 1
+  fields:
+    priority: 1
+    main: false
+    category: coding
+    startdate: 1987-09-01
+    enddate: 1988-06-30
+    cardtype: education
+    place: University of Brighton
+    title: HITECC Engineering Diploma
+    subtitle: Pass with Distinction
+    image: UoB.png
+    keywords: brighton, sussex, university, education, diploma, engineering, civil,
+      electrical, electronic, mechanical, software, computing
+    description: An engineering foundation course when formerly Brighton Polytechnic.
+      Subjects included civil, electrical, electronic, mechanical and software engineering.
+- model: portfolio.cards
+  pk: 2
+  fields:
+    priority: 1
+    main: true
+    category: coding
+    startdate: 1988-09-01
+    enddate: 1991-06-30
+    cardtype: education
+    place: Manchester Metropolitan University
+    title: BSc Honours Degree in Combined Studies, with Computer Science and Printing
+      & Photographic Technology
+    subtitle: 1st class Honours
+    image: mmu.jpg
+    keywords: manchester, metropolitcan, university, education, degree, honours, computer,
+      computing, science, printing, photography, technology, kodak, desktop publishing,
+      reprographics, software
+    description: Formerly Manchester Polytechnic. Units studied included Artificial
+      Intelligence, Human Computer Interaction and Microprocessors. My degree project
+      was a study of computer algorithms to produce halftoning on digital printers.
+      Winner of national prize The Kodak award for excellence in Photographic Technology.
+- model: portfolio.cards
+  pk: 3
+  fields:
+    priority: 1
+    main: true
+    category: writing
+    startdate: 1999-09-01
+    enddate: 2000-08-31
+    cardtype: education
+    place: University of Sheffield
+    title: MA in Creative Writing for Film and Television
+    subtitle: Pass
+    image: uos.svg
+    keywords: sheffield, university, education, masters, arts, creative, writing,
+      television, film, industry, filmmaking, scriptwriting
+    description: This prestigious course covered scriptwriting and television production.
+      I was tutored by BAFTA award-winning writers Jack Rosenthal and Andrew Davies.
+      There were lectures by people within the television industry, creative industry
+      agents, as well as filmmakers such as Ken Loach.
+- model: portfolio.cards
+  pk: 4
+  fields:
+    priority: 1
+    main: false
+    category: coding
+    startdate: 1984-09-01
+    enddate: 1987-08-31
+    cardtype: work
+    place: Detail Dynamics, London
+    title: Computer Programmer
+    subtitle: ''
+    image: bbcmicro.png
+    keywords: work, london, computer, computing, programmer, bbc, micro, basic, 6502,
+      multimedia, software
+    description: A small company producing early day multimedia promotional software
+      written on BBC computers with BBC Basic and 6502 assembler.
+- model: portfolio.cards
+  pk: 5
+  fields:
+    priority: 1
+    main: false
+    category: coding
+    startdate: 1991-08-01
+    enddate: 1994-05-31
+    cardtype: work
+    place: Crosfield Electronics, Hemel Hempstead
+    title: Software Engineer
+    subtitle: ''
+    image: crosfield.png
+    keywords: work, crosfield, electronics, hemel hempstead, hertfordshire, C, desktop
+      publishing, reprographics, software, engineer, computer, computing
+    description: Having a reputation for high-end graphics and desktop publishing,
+      I was in software teams writing in the C language for propriety hardware.
+- model: portfolio.cards
+  pk: 6
+  fields:
+    priority: 1
+    main: false
+    category: coding
+    startdate: 1994-06-01
+    enddate: 1996-03-31
+    cardtype: work
+    place: Epic Multimedia Group, Brighton
+    title: Games Programmer
+    subtitle: ''
+    image: oldsteine.jpg
+    keywords: work, epic, brighton, sussex, drowned god, cdrom, cd-rom, games, programmer,
+      computer, computing, software, macintosh, windows, mfc
+    description: Macintosh CD-Rom and games programmer. One of the games I worked
+      on was Drowned God. Mostly porting games written in C++ from Windows (with Microsoft
+      Foundation Classes) to Apple Macs.
+- model: portfolio.cards
+  pk: 7
+  fields:
+    priority: 1
+    main: false
+    category: coding
+    startdate: 1996-04-01
+    enddate: 2000-03-31
+    cardtype: work
+    place: Various, London, Brighton
+    title: Self Employed Programmer
+    subtitle: ''
+    image: selfemployed.png
+    keywords: brighton, london, work, self, employed, shareware, c, c++, macromedia
+      director, games, programmer, computer, computing, software
+    description: Contracts for various games and new media companies. Mostly writing
+      in either C, C++ or Macromedia Director. I also developed and sold shareware.
+- model: portfolio.cards
+  pk: 8
+  fields:
+    priority: 1
+    main: false
+    category: coding
+    startdate: 2000-02-01
+    enddate: 2001-01-31
+    cardtype: work
+    place: Nottingham Trent University
+    title: Research Post
+    subtitle: ''
+    image: ntu.png
+    keywords: work, university, nottingham, c, c++, macromedia director, games, programmer,
+      computer, computing, research
+    description: Working in a small team to produce educational software for people
+      with disabilities and then evaluating the software.
+- model: portfolio.cards
+  pk: 9
+  fields:
+    priority: 1
+    main: false
+    category: coding
+    startdate: 2001-02-01
+    enddate: 2001-04-30
+    cardtype: work
+    place: Transeden, London
+    title: Programmer
+    subtitle: ''
+    image: islington.jpg
+    keywords: work, london, macromedia director, programmer, computer, computing,
+      research, kiosks
+    description: Facing Islington Green, this was a small new media startup company
+      during the internet bubble, producing software for Kiosks in pubs and clubs.
+      The software was written in Macromedia Director. The company was struggling
+      to raise further investment and went bankrupt.
+- model: portfolio.cards
+  pk: 10
+  fields:
+    priority: 1
+    main: false
+    category: retail
+    startdate: 2002-11-01
+    enddate: 2003-08-31
+    cardtype: work
+    place: Holland & Barrett, Watford
+    title: Casual Retail Assistant
+    subtitle: ''
+    image: hb.jpg
+    keywords: work, watford, hertfordshire, retail, part time, health, food
+    description: Shelf stacking and cashier, 15 hours a week. This job paid the bills
+      while I was writing a feature-length film script that film companies had shown
+      an interest in.
+- model: portfolio.cards
+  pk: 11
+  fields:
+    priority: 1
+    main: false
+    category: school
+    startdate: 1977-09-01
+    enddate: 1984-06-30
+    cardtype: education
+    place: Sir James Altham Comprehensive School, Watford
+    title: School Student
+    subtitle: Mathematics, Physics A levels
+    image: school.png
+    keywords: education, school, watford, hertfordshire, mathematics, english, physics,
+      gce, cse, o levels, a levels
+    description: 'A levels: Mathematics, Physics, GCE O levels: English, Mathematics,
+      Advanced Mathematics, Statistics, Integrated Science, Graphic Communication.'
+- model: portfolio.cards
+  pk: 12
+  fields:
+    priority: 1
+    main: false
+    category: writing
+    startdate: 2006-03-01
+    enddate: null
+    cardtype: writing
+    place: QueenSpark Publishers
+    title: Alt-Future
+    subtitle: 'My story: Minus 27 degrees in the afternoon'
+    image: alt-future.jpeg
+    keywords: writing, fiction, published, publication, book, queenspark, alt, future,
+      alt-future
+    description: A short story compilation about imagined futures in Brighton. My
+      story tells of a dystopian love story
+- model: portfolio.cards
+  pk: 13
+  fields:
+    priority: 1
+    main: false
+    category: writing
+    startdate: 2013-12-01
+    enddate: null
+    cardtype: writing
+    place: New Internationalist Publications
+    title: 'People Over Capital: The Co-operative Alternative to Capitalism'
+    subtitle: 'My essay: Renovating the House of Co-operatives'
+    image: people-over-capital.jpeg
+    keywords: writing, nonfiction, published, publication, book, new internationalist,
+      people, capital, people over capital
+    description: A compilation of essays about co-operatives edited by Rob Harrison
+      from Ethical Consumer magazine. My essay was blue-sky thinking about an ecosystem
+      of co-operatives.
+- model: portfolio.cards
+  pk: 14
+  fields:
+    priority: 20
+    main: true
+    category: coding
+    startdate: null
+    enddate: null
+    cardtype: skill
+    place: programming language
+    title: Python
+    subtitle: 'Django, Flask, PEP, pyGTK, CPython'
+    image: python.svg
+    keywords: python, pypi, flask, django, pep, cpython
+    description: 15 years of Python coding, including published open-source code.
+      I've written command line and GUI apps (pyGTK). I've also interfaced C code with CPython.
+      Web development with both Django and Flask web frameworks.
+      Maintain PEP8 coding style and regularly read PEP documents.
+      Experience of Python packaging wheels and publishing on PyPi.
+- model: portfolio.cards
+  pk: 15
+  fields:
+    priority: 19
+    main: true
+    category: coding
+    startdate: null
+    enddate: null
+    cardtype: skill
+    place: architecture
+    title: Linux
+    subtitle: 'Apache, MySQL'
+    image: linux.png
+    keywords: linux, apache, mysql, ubuntu, mint, manjaro
+    description: I have been using Linux since 2006, having experimented with many distros, such as Ubuntu, Mint and Manjaro. 
+      Good experience of ssh, shell and Bash scripting.
+      This website is run on an Ubuntu server cloud droplet, with apache server and mysql database.
+- model: portfolio.cards
+  pk: 16
+  fields:
+    priority: 18
+    main: true
+    category: coding
+    startdate: null
+    enddate: null
+    cardtype: skill
+    place: programming language
+    title: PHP
+    subtitle: Laravel
+    image: laravel.png
+    keywords: php, laravel
+    description: I've developed with the Laravel framework for the Green Party.
+      I've also published this <a href='http://laravel.bobportfolio.uk/'>soccertables</a> site.
+      The football results are stored in mysql.
+- model: portfolio.cards
+  pk: 17
+  fields:
+    priority: 17
+    main: true
+    category: coding
+    startdate: null
+    enddate: null
+    cardtype: skill
+    place: front-end development
+    title: Javascript, HTML, CSS, Jquery, Bootstrap 5
+    subtitle: ''
+    image: htmlcssjs.png
+    keywords: javascript, html, css, jquery, bootstrap
+    description: I have good experience of front-end development.
+- model: portfolio.cards
+  pk: 18
+  fields:
+    priority: 16
+    main: false
+    category: coding
+    startdate: null
+    enddate: null
+    cardtype: skill
+    place: programming language
+    title: C, C++
+    subtitle: ''
+    image: c++.png
+    keywords: c, c++
+    description: I first wrote a C language program in 1989.
+      I have 10 years professional experience in software engineering and also the games industry.
+- model: portfolio.cards
+  pk: 19
+  fields:
+    priority: 100
+    main: true
+    category: coding
+    startdate: 2023-05-01
+    enddate: 2023-12-31
+    cardtype: work
+    place: Green Party, London
+    title: Full-stack PHP-Laravel Developer
+    subtitle: ''
+    image: green.jpg
+    keywords: work, green, canvassing, php, laravel, phpstorm, mysql, programmer,
+      computer, computing, basecamp, gitlab, teams, scrum, python, geopandas
+    description: Full-time volunteer working remotely in a small team producing canvassing softare.
+      I started with front-end tasks, coding the blade templates with HTML, CSS, Javascript and Jquery.
+      I then took on more complex back-end tasks, such as vastly improving the electoral register upload speed and reliability, by converting them to queue jobs and writing pure SQL functions.
+      The project used Basecamp for project management, GitLab for version control and we had scrum meetings on Teams.
+      I also wrote Python/Geopandas code to extract geospatial data from the Ordinance Survey to pre-build addressing tables.

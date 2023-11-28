@@ -8,6 +8,12 @@
     <link rel="stylesheet" type="text/css" href="{% static 'portfolio/projects.css' %}" />
 {% endblock %}
 
+{% block navbar %}
+    <a class="nav-item nav-link" href="/">Home</a>
+    <a class="nav-item nav-link active" href="#">Projects</a>
+    <a class="nav-item nav-link" href="/resume/main">Resume</a>
+{% endblock %}
+
 {% block content %}
 
 <div class="row">
