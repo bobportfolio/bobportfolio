@@ -46,8 +46,8 @@ def resume(request, card_filter):
         args['card_filter'] = card_filter.capitalize()
         cardtype = 'skill' if card_filter == 'skills' else card_filter
         cards = Cards.objects.filter(cardtype=cardtype)
-    elif card_filter == 'best':
-        args['card_filter'] = 'Best'
+    elif card_filter == 'featured':
+        args['card_filter'] = 'Featured'
         cards = Cards.objects.filter(main=True)
     elif card_filter in ['coding', 'writing']:
         args['card_filter'] = card_filter.capitalize()
@@ -59,3 +59,9 @@ def resume(request, card_filter):
     args['card_count'] = cards.count()
     args.update(get_versions())
     return render(request, 'portfolio/resume.html', args)
+
+
+def wellbeing(request):
+    args = {'page': 'Wellbeing'}
+    args.update(get_versions())
+    return render(request, 'portfolio/wellbeing.html', args)

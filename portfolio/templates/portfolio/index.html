@@ -11,7 +11,8 @@
 {% block navbar %}
     <a class="nav-item nav-link active" href="#">Home</span></a>
     <a class="nav-item nav-link" href="/portfolio">Projects</a>
-    <a class="nav-item nav-link" href="/resume/best">Resume</a>
+    <a class="nav-item nav-link" href="/resume/featured">Resume</a>
+    <a class="nav-item nav-link" href="wellbeing">Wellbeing</a>
 {% endblock %}
 
 {% block content %}
@@ -44,13 +45,13 @@
     </div>
 
     <div class="carousel-item home-carousel">
-	  <a href="resume/best">
+	  <a href="resume/featured">
         <img src="{% static 'portfolio/images/resume.jpg' %}" alt="Resume"/>
 	  </a>
     </div>
 
     <div class="carousel-item home-carousel">
-	  <a href="#">
+	  <a href="wellbeing">
           <img src="{% static 'portfolio/images/wellbeing.jpg' %}" alt="Wellbeing"/>
 	  </a>
     </div>
@@ -68,8 +69,8 @@
 <div class="container simple-buttons">
   <p></p>
   <a href="portfolio" type="button" class="btn btn-primary btn-lg">Projects</a>
-  <a href="resume/best" type="button" class="btn btn-success btn-lg">Resume</a>
-  <a href="#" type="button" class="btn btn-warning btn-lg">Wellbeing</a>
+  <a href="resume/featured" type="button" class="btn btn-success btn-lg">Resume</a>
+  <a href="wellbeing" type="button" class="btn btn-warning btn-lg">Wellbeing</a>
 </div>
 
 {% endblock %}
