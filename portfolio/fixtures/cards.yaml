@@ -331,5 +331,24 @@
     description: Full-time volunteer working remotely in a small team producing canvassing softare.
       I started with front-end tasks, coding the blade templates with HTML, CSS, Javascript and Jquery.
       I then took on more complex back-end tasks, such as vastly improving the electoral register upload speed and reliability, by converting them to queue jobs and writing pure SQL functions.
-      The project used Basecamp for project management, GitLab for version control and we had scrum meetings on Teams.
+      The project uses Basecamp for Agile project management, GitLab for version control and we had scrum meetings on Teams.
       I also wrote Python/Geopandas code to extract geospatial data from the Ordinance Survey to pre-build addressing tables.
+- model: portfolio.cards
+  pk: 20
+  fields:
+    priority: 15
+    main: false
+    category: writing
+    startdate: null
+    enddate: null
+    cardtype: skill
+    place: communication
+    title: Writing
+    subtitle: 'articles, technical documentation'
+    image: fountainpen.jpg
+    keywords: writing, documentation, communication
+    description: After completing the MA in Creative Writing, I wrote two feature-length film scripts.
+      I was part of an informal writers group in Brighton for seven years.
+      We shared our writing, which could be any kind of fiction and reviewed each other's work.
+      Members of the group included published novelists.
+      It helped expand and sharpen my writing skills and led to two published works.

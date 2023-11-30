@@ -19,7 +19,7 @@
 <div class="row">
     <div class="col-md-6">
         <div class="title">
-            <h1>Resume{% if card_filter %} : {{ card_filter }}{% endif %}</h1>            
+            <h1>Resume : {{ card_filter }}</h1>   
         </div>
     </div>
     <div class="col-md-6">
@@ -33,6 +33,7 @@
 <div>
     <div class="buttons">
         <a href="all" class="btn card-all">All</a>
+        <a href="best" class="btn card-best">Best</a>
         <a href="coding" class="btn card-coding">Coding</a>
         <a href="education" class="btn card-education">Education</a>    
         <a href="skills" class="btn card-skill">Skills</a>
@@ -69,6 +70,15 @@
         </div>
     </div>
     {% endfor %}
+</div>
+
+<div class="row">
+    <div class="footer">
+        <h5><i>{{ card_count }} cards shown out of {{ total_cards }}</i></h5>
+        {% if card_filter != 'All' %}
+        <a href="all" type="button" class="btn btn-success btn-lg">Show All</a>
+        {% endif %}
+    </div>
 </div>
 {% endblock %}
 

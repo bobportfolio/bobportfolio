@@ -41,20 +41,21 @@ def projects(request):
 
 
 def resume(request, card_filter):
-    args = {'page': 'Resume'}
+    args = {'page': 'Resume', 'total_cards': Cards.objects.count()}
     if card_filter in ['skills', 'education', 'work']:
         args['card_filter'] = card_filter.capitalize()
         cardtype = 'skill' if card_filter == 'skills' else card_filter
         cards = Cards.objects.filter(cardtype=cardtype)
-    elif card_filter == 'main':
-        args['card_filter'] = 'Main'
+    elif card_filter == 'best':
+        args['card_filter'] = 'Best'
         cards = Cards.objects.filter(main=True)
     elif card_filter in ['coding', 'writing']:
         args['card_filter'] = card_filter.capitalize()
         cards = Cards.objects.filter(category=card_filter)
     else:
-        args['card_filter'] = None
+        args['card_filter'] = 'All'
         cards = Cards.objects.all()
     args['cards'] = cards.order_by('-priority', '-startdate')
+    args['card_count'] = cards.count()
     args.update(get_versions())
     return render(request, 'portfolio/resume.html', args)
