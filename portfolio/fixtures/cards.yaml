@@ -328,7 +328,7 @@
     image: green.jpg
     keywords: work, green, canvassing, php, laravel, phpstorm, mysql, programmer,
       computer, computing, basecamp, gitlab, teams, scrum, python, geopandas
-    description: Full-time volunteer working remotely in a small team producing canvassing softare.
+    description: Full-time volunteer working remotely in a small team producing canvassing software.
       I started with front-end tasks, coding the blade templates with HTML, CSS, Javascript and Jquery.
       I then took on more complex back-end tasks, such as vastly improving the electoral register upload speed and reliability, by converting them to queue jobs and writing pure SQL functions.
       The project uses Basecamp for Agile project management, GitLab for version control and we had scrum meetings on Teams.
