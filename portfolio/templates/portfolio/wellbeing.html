@@ -4,10 +4,14 @@
 
 {% block title %} bobportfolio.uk - wellbeing {% endblock %}
 
+{% block page_stylesheets %}
+    <link rel="stylesheet" type="text/css" href="{% static 'portfolio/wellbeing.css' %}" />
+{% endblock %}
+
 {% block navbar %}
     <a class="nav-item nav-link active" href="/">Home</span></a>
     <a class="nav-item nav-link" href="/portfolio">Projects</a>
-    <a class="nav-item nav-link" href="/resume/best">Resume</a>
+    <a class="nav-item nav-link" href="/resume/featured">Resume</a>
     <a class="nav-item nav-link" href="#">Wellbeing</a>
 {% endblock %}
 
@@ -17,6 +21,67 @@
   <div class="row" style="padding:10px">
         <h1>Wellbeing</h1>
   </div>
+  <div>
+    <p class="wellbeing-highlight">
+      This page is a description of my mental health and work capability.
+      Given out of work periods in the past, I seek to reassure a potential employer
+      of my capacity to be highly productive. And I can be highly productive!
+    </p>
+  </div>
+  <div class="row g-0 wellbeing-section">
+    <div class="col-md-2">
+        <img class="wellbeing-img-clock" src="{% static 'portfolio/images/timeclock.jpg' %}"></img>
+    </div>
+    <div class="col-md-10">    
+        <h4>Work Hours</h4>
+        <p>
+          The full-time work I've done in the last six months in particular and
+          the last 18 months where I've maintained timesheets, has given me a very good idea of my work capabilities.
+          I can sustain up to 37.5 hours week (home working) and work up to a maximum 60 hours in one week.<br>
+          When I am in the "zone", I can develop for hours and not even notice the time passing, I'm enjoying the work so much.
+          However, to be at my most productive, I would prefer hybrid, flexible annualised hours, with an average week below:<br>
+          <span class="weekly-hours">30 hours a week average</span>
+        </p>
+     </div>
+  </div>
+  <br>
+  <div class="row g-0 wellbeing-section">
+    <div class="col-md-9">    
+      <h4>Mental Health</h4>
+      <p>
+        My mental health problems can be summarised as Complex Post Traumatic Stress Disorder (cPTSD).
+      </p>
+      <p>
+        I'm finding, less events are triggering replays of the trauma.
+        This is partly due to changes in my life, effective medication and partly due to knowing the triggers.
+        However, I am still capable of replaying trauma once or twice a year, which 
+        has the effect of tiring me and loss of concentration. This tends to last one or two weeks
+        and will reduce my productivity over those weeks. 
+        This is why as a developer, working flexibly, where I can build up hours, can act in lieu of the
+        days where my mental health is poor.
+      </p>
+    </div>
+    <div class="col-md-3">
+        <img class="wellbeing-img-head" src="{% static 'portfolio/images/mentalhealth.png' %}"></img>
+    </div>    
+  </div>
+  <br>
+  <div class="row g-0 wellbeing-section">
+    <div class="col-md-2">
+        <img class="wellbeing-img-handshake" src="{% static 'portfolio/images/handshake.svg' %}"></img>
+    </div>    
+    <div class="col-md-10">    
+      <h4>Good Working Relationships</h4>
+      <p>
+        I am warm, friendly, honest and work well within a team.
+      </p>
+      <p>
+        The honesty about my mental health on this page may put off potential employers.
+        If the price is it takes longer to find a job, then it is a price worth paying,
+        as the job I will get, is one where I can be at my most productive, happier
+        and the employer will be happy with my productivity.
+      </p>
+    </div>
 </div>
 
 {% endblock %}

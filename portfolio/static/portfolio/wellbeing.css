@@ -1,0 +1,38 @@
+/* css for wellbeing page */
+
+.wellbeing-highlight {
+  font-size: 16pt;
+}
+
+.wellbeing-img-clock {
+  height: 168px;
+  width: 168px;
+}
+
+.wellbeing-img-head {
+  height: 204px;
+  width: 204px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.wellbeing-img-handshake {
+  height: 158px;
+  width: 158px;
+}
+
+.wellbeing-section {
+  padding: 16px;
+  border: 1px solid;
+}
+
+.weekly-hours {
+  color: red;
+  font-size: 18pt;
+}
+
+.weekly-hours-table {
+  margin-left: auto;
+  margin-right: auto;
+}
