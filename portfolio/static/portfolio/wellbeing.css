@@ -5,8 +5,8 @@
 }
 
 .wellbeing-img-clock {
-  height: 168px;
-  width: 168px;
+  height: 90%;
+  width: 90%;
 }
 
 .wellbeing-img-head {
@@ -29,10 +29,4 @@
 
 .weekly-hours {
   color: red;
-  font-size: 18pt;
-}
-
-.weekly-hours-table {
-  margin-left: auto;
-  margin-right: auto;
 }
