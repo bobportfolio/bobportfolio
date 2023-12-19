@@ -14,7 +14,9 @@
        
         {% bootstrap_css %}
         {# bootstrap_styles theme='cyborg' type='min.css' #}
-        <link rel="shortcut icon" type="image/png" href="{% static 'portfolio/images/favicon.ico' %}">
+        <link rel="shortcut icon" type="image/png" href="{% static 'portfolio/images/favicon48.png' %}">
+        <link rel="shortcut icon" sizes="192x192" href="{% static 'portfolio/images/favicon196.png' %}">
+        <link rel="apple-touch-icon" href="{% static 'portfolio/images/favicon196.png' %}">
         <link rel="stylesheet" type="text/css" href="{% static 'portfolio/starter.css' %}" />
         {% block page_stylesheets %}{% endblock %}
     </head>
